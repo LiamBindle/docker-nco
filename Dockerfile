@@ -1,5 +1,6 @@
-FROM continuumio/miniconda:4.7.12-alpine
+FROM liambindle/nco:latest
 
-RUN /opt/conda/bin/conda install -c conda-forge nco \
-&&  /opt/conda/bin/conda clean -afy
+USER root
+
+RUN apk --update add --no-cache rsync vim
 
